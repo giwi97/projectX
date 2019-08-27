@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="http://java.sun.com/xml/ns/javaee"
+     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                       http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+     id="WebApp_ID" version="3.0">
+  <display-name>YulaBeach</display-name>
+ 
+  <servlet>
+    <servlet-name>Cleaning_servlet</servlet-name>
+    <servlet-class>com.YulaBeach.Controller.Cleaning_servlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>Maintenance_servlet</servlet-name>
+    <servlet-class>com.YulaBeach.Controller.Maintenance_servlet</servlet-class>
+  </servlet>
+   
+  <servlet-mapping>
+    <servlet-name>Cleaning_servlet</servlet-name>
+    <url-pattern>/Cleaning_servlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Maintenance_servlet</servlet-name>
+    <url-pattern>/Maintenance_servlet</url-pattern>
+  </servlet-mapping>
+  
+   
+ 
+ 
+</web-app>
