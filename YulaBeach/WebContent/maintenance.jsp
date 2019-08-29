@@ -23,6 +23,10 @@
 	<!-- Latest compiled JavaScript -->
 	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+	<script src = "scripts/maint.js"></script>
+
+	
     
     
 </head>
@@ -45,7 +49,7 @@
     	<div id="hrLine"></div> 
     	<a id="leftNevTEXTbody" href="maintenance.jsp" style="color: yellow;" ><span class="glyphicon glyphicon-wrench"></span> New maintenance task </a><br>
     	<div id="hrLine"></div> 
-    	<a id="leftNevTEXTbody" href="grn.jsp"><span class="glyphicon glyphicon-list-alt"></span> Current Maint. tasks</a><br>
+    	<a id="leftNevTEXTbody" href="maintenanceList.jsp"><span class="glyphicon glyphicon-list-alt"></span> Current Maint. tasks</a><br>
     	<div id="hrLine"></div> 
     	<a id="leftNevTEXTbody" href="cleaningList.jsp"><span class="glyphicon glyphicon-list-alt"></span> Current Cleaning tasks</a><br>
     	<div id="hrLine"></div>
@@ -62,7 +66,7 @@
 
 	<div class="containerX"  style="margin-left:350px;margin-right:250px;">
   <h2>New Maintenance Task</h2><br>
-  <form action="Maintenance_servlet" id = "taskForm" method="post">
+  <form action="Maintenance_servlet" id = "taskForm" method="post" onsubmit="return validateMaint()" name="maintForm">
     <div class="form-group">
       <label id="attribute1">Room No.</label><br>
       	<select id="listRoom" name="room">

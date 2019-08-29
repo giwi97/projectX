@@ -77,8 +77,11 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 	
    
     <div id="leftNavi">
-    	<input id="search" type="text" class="form-control" placeholder="Enter item code">
-    	<input id="searchBtn" type="submit" class="btn btn-primary" value="Search Item"/>  
+    
+    	<form method = "post" action="searchClean.jsp">
+    	<input id="search" type="text" class="form-control" name="job_id" placeholder="Enter Job ID">
+    	<input id="searchBtn" type="submit" class="btn btn-primary"  value="Search Job"/>  
+    	 </form>
     	 
     	<div id="hrLine"></div>     	 
     	<a id="leftNevTEXT" href="inventory.jsp"><span class="glyphicon glyphicon-home"></span> Home</a><br>
@@ -89,7 +92,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     	<div id="hrLine"></div> 
     	<a id="leftNevTEXTbody" href="maintenance.jsp"><span class="glyphicon glyphicon-wrench"></span> New maintenance task </a><br>
     	<div id="hrLine"></div> 
-    	<a id="leftNevTEXTbody" href="grn.jsp"><span class="glyphicon glyphicon-list-alt"></span> Current Maint. tasks</a><br>
+    	<a id="leftNevTEXTbody" href="maintenanceList.jsp"><span class="glyphicon glyphicon-list-alt"></span> Current Maint. tasks</a><br>
     	<div id="hrLine"></div> 
     	<a id="leftNevTEXTbody" href="cleaningList.jsp" style="color: yellow;"><span class="glyphicon glyphicon-list-alt"></span> Current Cleaning tasks</a><br>
     	<div id="hrLine"></div>
@@ -115,6 +118,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 				<td>Room number</td>
 				<td>Assigned Employee ID</td>
 				<td>Description</td>
+				<td>Date</td>
 				<td>Update</td>
 				<td>Delete</td>
 				</tr>
@@ -137,6 +141,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 				<td><%=resultSet.getString("room_no") %></td>
 				<td><%=resultSet.getString("emp_id") %></td>
 				<td><%=resultSet.getString("desc") %></td>
+				<td><%=resultSet.getString("date") %></td>
 				<td><a class="btn btn-primary" href="updateCleaning.jsp?job_id=<%=resultSet.getString("job_id")%>">Update</a></td>
 				<td><a class="btn btn-primary" style="background-color:red;" href="deleteClean.jsp?job_id=<%=resultSet.getString("job_id") %>">Delete</a></td>
 				</tr>

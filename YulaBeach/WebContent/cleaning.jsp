@@ -23,6 +23,8 @@
 	<!-- Latest compiled JavaScript -->
 	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+	<script src = "scripts/clean.js"></script>
     
     
 </head>
@@ -45,7 +47,7 @@
     	<div id="hrLine"></div> 
     	<a id="leftNevTEXTbody" href="maintenance.jsp"><span class="glyphicon glyphicon-wrench"></span> New maintenance task </a><br>
     	<div id="hrLine"></div> 
-    	<a id="leftNevTEXTbody" href="grn.jsp"><span class="glyphicon glyphicon-list-alt"></span> Current Maint. tasks</a><br>
+    	<a id="leftNevTEXTbody" href="maintenanceList.jsp"><span class="glyphicon glyphicon-list-alt"></span> Current Maint. tasks</a><br>
     	<div id="hrLine"></div> 
     	<a id="leftNevTEXTbody" href="cleaningList.jsp"><span class="glyphicon glyphicon-list-alt"></span> Current Cleaning tasks</a><br>
     	<div id="hrLine"></div>
@@ -62,7 +64,7 @@
 
 	<div class="containerX"  style="margin-left:350px;margin-right:250px;">
   <h2>New Cleaning Task</h2><br>
-  <form  id = "taskForm" action="Cleaning_servlet" method="POST" >
+  <form  id = "taskForm" action="Cleaning_servlet" method="POST" onsubmit="return validateClean()" name="cleanForm">
     <div class="form-group">
       <label id="attribute1">Room No.</label><br>
       	<select id="listRoom" name="room">

@@ -35,6 +35,27 @@
     
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<style>
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+</style>
+
+
+
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Update Cleaning List</title>
@@ -99,6 +120,8 @@
   	
   	<form method="post" action="update-processCl.jsp">
 	<input type="hidden" name = "job_id" value="<%=resultSet.getString("job_id") %>">
+	<br>
+	Job ID:<br>
 	<input type="text" name = "job_id" value="<%=resultSet.getString("job_id") %>">
 	<br>
 	Room Number:<br>
